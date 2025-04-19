@@ -11,7 +11,7 @@ def home():
 def predict():
     if request.method == "POST":
         user_query = request.form["query"]
-        results = search_french_sentences(user_query, top_k=3)
+        results = search_french_sentences(user_query, top_k=5)
         return render_template("index.html", query=user_query, results=results)
 
 if __name__ == "__main__":
