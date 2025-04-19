@@ -11,7 +11,7 @@ This project simulates a multilingual semantic search engine:
 - 🌍 Users enter **English queries**
 - 🤔 The app uses **transformer-based embeddings** to understand meaning
 - 🔍 It finds the **most similar French sentences**
-- 🚀 Results are served via a web interface using **Flask**
+- 🚀 Results are served via a web interface using **Flask**, displaying the Top-5 best matches
 
 This is ideal for demonstrating your skills in:
 - Semantic search
@@ -39,6 +39,7 @@ Cross-Lingual-Search-Transformers-Flask/
 ├── utils.py                       # Loads model + performs search
 ├── embeddings.pkl                 # Stored embeddings and sentence pairs
 ├── Multilingual-Search-using-Transformers.ipynb  # Full notebook
+├── evaluate_top_k_accuracy.ipynb # Evaluation notebook (Top-1/3/5 accuracy)
 ├── examples.txt                   # Sample English queries
 ├── templates/
 │   └── index.html                # UI form and results view
@@ -85,13 +86,16 @@ python app.py
 - Multilingual semantic search (English → French)
 - Sentence embeddings with `MiniLM` multilingual model
 - Cosine similarity for ranking
-- Interactive UI with Flask
+- Interactive UI with Flask (returns Top-5 matches)
+- Offline evaluation with evaluate_top_k_accuracy.ipynb
 - Query examples via `examples.txt`
 
 ---
 
 ## 📊 Performance
-- Top-1 Accuracy (~56.5%): This means the model retrieves the correct French sentence as the top result for about 56.5% of English queries.
+- Top-1 Accuracy: ~56.5% (113/200)
+- Top-3 Accuracy: ~86.0% (172/200)
+- Top-5 Accuracy: ~93.5% (187/200)
 - Zero-shot learning: The model was not trained or fine-tuned on this specific dataset — it is using its pre-trained knowledge to understand and match across languages.
 - How to improve? You can improve this score by:
   - Fine-tuning on a larger or domain-specific dataset
