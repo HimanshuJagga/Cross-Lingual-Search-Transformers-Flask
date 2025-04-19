@@ -1,39 +1,39 @@
-🧠 Cross-Lingual Semantic Search (Transformers + Flask)
+
+# 🧠 Cross-Lingual Semantic Search (Transformers + Flask)
 
 An end-to-end NLP project that allows users to search French sentences using English queries. Built with Hugging Face Transformers, Sentence Transformers, and deployed via Flask. This project showcases multilingual semantic search and real-world AI deployment.
 
-🔍 Project Overview
+---
+
+## 🔍 Project Overview
 
 This project simulates a multilingual semantic search engine:
-
-🌍 Users enter English queries
-
-🤔 The app uses transformer-based embeddings to understand meaning
-
-🔍 It finds the most similar French sentences
-
-🚀 Results are served via a web interface using Flask
+- 🌍 Users enter **English queries**
+- 🤔 The app uses **transformer-based embeddings** to understand meaning
+- 🔍 It finds the **most similar French sentences**
+- 🚀 Results are served via a web interface using **Flask**
 
 This is ideal for demonstrating your skills in:
+- Semantic search
+- NLP
+- Hugging Face Transformers
+- Deployment with Flask
 
-Semantic search
+---
 
-NLP
+## 🎮 Demo Use Case
 
-Hugging Face Transformers
+> "When he asked who had broken the window, all the boys put on an air of innocence." → "Lorsqu'il a demandé qui avait cassé la fenêtre, tous les garçons ont pris un air innocent."
 
-Deployment with Flask
+> "The password is "Muiriel" → "Le mot de passe est « Muiriel"
 
-🎮 Demo Use Case
+Sample queries for better results are listed in `examples.txt`
 
-"What is your name?" → "Comment tu t'appelles ?"
+---
 
-"How are you?" → "Comment ça va ?"
+## 📁 Folder Structure
 
-Sample queries for better results are listed in examples.txt
-
-📁 Folder Structure
-
+```
 Cross-Lingual-Search-Transformers-Flask/
 ├── app.py                         # Flask backend
 ├── utils.py                       # Loads model + performs search
@@ -42,68 +42,67 @@ Cross-Lingual-Search-Transformers-Flask/
 ├── examples.txt                   # Sample English queries
 ├── templates/
 │   └── index.html                # UI form and results view
+```
 
-🚀 How to Run (Locally)
+---
 
-Clone this repo:
+## 🚀 How to Run (Locally)
 
-git clone https://github.com/yourusername/Cross-Lingual-Search-Transformers-Flask.git
+1. Clone this repo:
+```bash
+git clone https://github.com/HimanshuJagga/Cross-Lingual-Search-Transformers-Flask.git
 cd Cross-Lingual-Search-Transformers-Flask
+```
 
-(Optional) Create a virtual environment:
-
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-
-Install dependencies:
-
+2. Install dependencies:
+```bash
 pip install flask sentence-transformers torch
+```
 
-Run the app:
-
+3. Run the app:
+```bash
 python app.py
+```
 
-Open browser:
-http://127.0.0.1:5000
+5. Open browser:
+[http://127.0.0.1:5000](http://127.0.0.1:5000)
 
-🚀 Technology Stack
+---
 
-Python
+## 🚀 Technology Stack
 
-Hugging Face Transformers
+- Python
+- Hugging Face Transformers
+- Sentence-Transformers
+- PyTorch
+- Flask
+- HTML 
 
-Sentence-Transformers
+---
 
-PyTorch
+## 💡 Key Features
 
-Flask
+- Multilingual semantic search (English → French)
+- Sentence embeddings with `MiniLM` multilingual model
+- Cosine similarity for ranking
+- Interactive UI with Flask
+- Query examples via `examples.txt`
 
-HTML (Jinja templates)
+---
 
-💡 Key Features
+## 📊 Performance
+- Top-1 Accuracy (~56.5%): This means the model retrieves the correct French sentence as the top result for about 56.5% of English queries.
+- Zero-shot learning: The model was not trained or fine-tuned on this specific dataset — it is using its pre-trained knowledge to understand and match across languages.
+- How to improve? You can improve this score by:
+  - Fine-tuning on a larger or domain-specific dataset
+  - Expanding the dataset with more aligned sentence pairs
+  - Trying other models like LaBSE or XLM-R for higher multilingual performance
 
-Multilingual semantic search (English → French)
+---
 
-Sentence embeddings with MiniLM multilingual model
+## 💬 Contact
 
-Cosine similarity for ranking
-
-Interactive UI with Flask
-
-Query examples via examples.txt
-
-📊 Performance
-
-Top-1 accuracy on test set: ~56.5% (zero-shot, 200 queries)
-
-Can be improved with fine-tuning or dataset expansion
-
-💬 Contact
-
-Made with ❤️ by Himanshu Jagga
-
-GitHub: https://github.com/HimanshuJagga
-
-LinkedIn: https://www.linkedin.com/in/himanshu-jagga-b08ab6170/
-
-Email: himanshujagga97@gmail.com
+Made with ❤️ by **Himanshu Jagga**
+- GitHub: [https://github.com/HimanshuJagga](https://github.com/HimanshuJagga)
+- LinkedIn: [https://www.linkedin.com/in/himanshu-jagga-b08ab6170/](https://www.linkedin.com/in/himanshu-jagga-b08ab6170/)
+- Email: himanshujagga97@gmail.com
